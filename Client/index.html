@@ -1,0 +1,109 @@
+<!--  
+/**
+ *  CoWebDraw 2015/12/18
+ *   基于HTML5的协同图形编辑系统--主界面
+ */
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>CoWebDraw</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="EasyUI/demo/demo.css"/> 
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="EasyUI/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="EasyUI/themes/icon.css">
+	
+	 <link rel="stylesheet" href="css/paint.css">
+    <script type="text/javascript" src="EasyUI/jquery.min.js"></script>
+	<script type="text/javascript" src="EasyUI/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/jscolor.js"></script>
+	<style type="text/css">
+        #canvas {
+        	display:block;
+	       border:thin inset #aaaaaa;
+        }
+    </style>
+</head>
+<body class="easyui-layout" onload="init()">
+	<div data-options="region:'east',split:true,title:'Info Show'" style="width:350px;padding:1px;">
+    	<div id="sitemsg" class="easyui-panel" title="Local User" style="width:98%;height:15%;overflow:auto;margin-bottom:2px;">
+    		<table style="width:100%">
+    			<thead>
+    				<tr align=center>
+    					<th width=20%>User Color</th>
+    					<th width=40%>User ID</th>
+    					<th width=40%>User Name</th>
+    				</tr>
+    			</thead>
+			    <tbody id="sitemsg_tbody">
+				</tbody>
+			</table>
+    	</div>
+    	<div id="online_user" class="easyui-panel" title="Online User" style="width:98%;height:30%;overflow:auto;margin-bottom:2px;">
+    		<table  style="width:100%;">
+        		<thead>
+        			<tr align=center>
+    					<th width=20%>User Color</th>
+    					<th width=40%>User ID</th>
+    					<th width=40%>User Name</th>
+        			</tr>
+        		</thead>
+        		<tbody id="online_user_table">
+        		</tbody> 
+			</table>
+    	</div>
+    	<div id="msgshow" class="easyui-panel" title="Chat" style="width:99%;height:51%;padding:5px;overflow:auto;margin-bottom:2px;">
+    	   <div>
+    	       
+    	   </div>
+    	</div>
+       <!--  
+    	   <input id="msg_txt1111"  type="text" class="easyui-textbox" style="width:80%;height:4%;"/>
+    	   <a href="javascript:send_msg()" class="easyui-linkbutton" iconCls="icon-ok" style="width:18%;height:4%;">Send</a>
+		-->
+	</div>
+	<div data-options="region:'center',title:'CoWebDraw'" style="width:99%;height:99%;background-color:rgb(153,153,153);">
+
+           <div style="width:99%;height:6%;"><!-- 上面的颜色及控制按钮框 -->
+               <div id="paint-controls" >
+                  <!--  <input id="paint-strokeStyleSelect" name="mycolor" type="text" value="#ffcc00" class="iColorPicker" />  -->
+                   Fill Color: <input id="fillcolor_input" class="jscolor" value="72AB27"/>
+                            
+                    Line Color: <input id="linecolor_input" class="jscolor" value="ab2567"/>
+
+ <!--  
+                     Line width: <select id='paint-lineWidthSelect' class='paint-select'>
+                               <option value='1.0'>1.0</option>
+                               <option value='2.0'>2.0</option>
+                               <option value='3.0'>3.0</option>
+                               <option value='4.0'>4.0</option>
+                               <option value='5.0'>5.0</option>
+                               <option value='6.0'>6.0</option>
+                            </select>
+                  
+                            <button type="button" name="Export Image" >Export Image</button>
+--> 
+               </div>
+              
+         </div>
+         <div style="width:99%;height:85%;b"><!-- 两个Canvas区域 -->
+               <canvas id="paint-icon-canvas" width="75" height="560">
+                 Canvas not supported
+               </canvas>          
+               <canvas id="paint-drawing-canvas" class='featured-example-canvas' width="920" height="560">
+                 Canvas not supported
+               </canvas>
+               <div id='paint-keyboard'></div>
+		<!--  <canvas id="canvas" width='900' height='550' >Canvas not support!</canvas>-->
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/other/jquery-2.2.0.min.js"></script>
+
+<script src="js/keyboard.js"></script>
+<script src="js/paint.js"></script>
+<script src="js/example.js"></script>
+<script type="text/javascript" src="js/controller.js"></script>
+</html>

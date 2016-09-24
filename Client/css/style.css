@@ -1,0 +1,18 @@
+/*
+ *  CoUEditor界面主文件
+ */
+
+table{border-right:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0}
+table th{background:#E6EFFF;border-left:1px solid #d0d0d0;border-top:1px solid #d0d0d0}
+table td{border-left:1px solid #d0d0d0;border-top:1px solid #d0d0d0}
+
+.site_id0{ background:#FF0000; }
+.site_id1{ background:#0080FF; }
+.site_id2{ background:#F9F900; }
+.site_id3{ background:#AFAF61; }
+.site_id4{ background:#9D9D9D; }
+.site_id5{ background:#0000E3; }
+.site_id6{ background:#9AFF02; }
+.site_id7{ background:#AD5A5A; }
+.site_id8{ background:#F00078; }
+.site_id9{ background:#00E3E3; }
